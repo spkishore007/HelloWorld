@@ -1,0 +1,22 @@
+<%= form_for(kishore) do |f| %>
+  <% if kishore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kishore.errors.count, "error") %> prohibited this kishore from being saved:</h2>
+
+      <ul>
+      <% kishore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

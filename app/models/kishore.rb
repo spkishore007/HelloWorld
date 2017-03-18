@@ -1,0 +1,2 @@
+class Kishore < ApplicationRecord
+end
